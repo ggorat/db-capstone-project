@@ -1,0 +1,1 @@
+SELECT menus.Cuisine, menuitems.Name FROM Menus INNER JOIN MenuItems ON Menus.ItemID = MenuItems.ItemID WHERE MenuID = ANY (SELECT MenuID FROM Orders WHERE Quantity >= 2);
